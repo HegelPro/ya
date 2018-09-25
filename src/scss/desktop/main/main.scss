@@ -1,0 +1,44 @@
+.dom-main {
+  
+  &__2blocks {
+    max-width: 630px;
+    margin-bottom: 29px;
+  }
+
+  &__card {
+    position: relative;
+
+    width: 585px;
+    height: 331px;
+
+    padding: 0 20px 0 25px;
+
+    display: flex;
+    justify-content: space-between;
+
+    &__text {
+      padding-top: 25px;
+      color: #333333;
+    }
+
+    &__greeting {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    &__report {
+      font-size: 14px;
+      color: #333333;
+      margin: 0 0 25px 0;
+    }
+
+    background-image: url('../../assets/bg@1x.png');
+    background-repeat: no-repeat;
+  }
+}
+
+@import "temp";
+@import "../switchs/switchs";
+@import "favorite-devises";
+@import "filter";
+@import "../devices-list/devices-list";

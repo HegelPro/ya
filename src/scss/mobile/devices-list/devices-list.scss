@@ -1,0 +1,123 @@
+.devices-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+
+  &_flex {
+    display: flex;
+  }
+
+  &_wrapable {
+    display: flex;
+
+    justify-content: space-between;
+
+    flex-wrap: wrap;
+  }
+
+  &_align {
+    display: flex;
+
+    justify-content: space-between;
+  }
+
+
+  &__iteam {
+    background-color: #F7F7F7;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border-radius: 20px;
+
+    margin-bottom: 15px;
+    padding: 14px 15px;
+
+    &_turn {
+      float: left;
+    }
+
+    &_size_normal {
+      flex-basis: 170px;
+      height: 92px;
+    }
+
+    &_size_small {
+      flex-basis: 170px;
+      height: 72px;
+    }
+
+    &_icon_cloud {
+      @extend %bg-icon;
+
+      background-image: url("../../assets/cloud-drizzle.png");
+    }
+    
+    &_icon_clock {
+      @extend %bg-icon;
+
+      background-image: url("../../assets/icon_scheduled@1x.png");
+    }
+
+    &_icon_sun_1 {
+      @extend %bg-icon;
+
+      background-image: url("../../assets/icon_sun@1x.png");
+    }
+ 
+    &_icon_sun_2 {
+      @extend %bg-icon;
+
+      background-image: url("../../assets/icon_sun_2@1x.png");
+    }
+ 
+    &_icon_temp_1 {
+      @extend %bg-icon;
+
+      background-image: url("../../assets/icon_temperature@1x.png");
+    }
+ 
+    &_icon_temp_2 {
+      @extend %bg-icon;
+
+      background-image: url("../../assets/icon_temperature_2@1x.png");
+    }
+
+    &__state {
+      overflow-wrap: break-word;
+      font-size: 12px;
+      color: #858585;
+      letter-spacing: 0;
+      text-align: left;
+    }
+    
+    &__name {
+      overflow-wrap: break-word;
+      font-size: 14px;
+      font-weight: bold;
+      color: #333333;
+      letter-spacing: 0;
+      line-height: 16px;
+      text-align: left;
+      margin: 0 0 5px 0;
+    }
+
+    &::-webkit-scrollbar { 
+      display: none; 
+    }
+
+    &:hover {
+      background-color: #ffffff;
+      box-shadow: 0 2px 6px 0 rgba(197,186,186,0.50);
+    }
+  }
+}
+
+
+
+%bg-icon {
+  background-repeat: no-repeat;
+  background-size: 24px 24px;
+  background-position: 14px 14px;
+  box-shadow: 0 2px 6px 0 rgba(197,186,186,0.50);
+}

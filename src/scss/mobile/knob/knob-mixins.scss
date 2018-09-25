@@ -1,0 +1,63 @@
+
+@mixin line-degrees( $line-width, $line-height, $amout-lines, $start-position, $finish-position ) {
+  &__line {
+    width: $line-width;
+    height: $line-height;
+
+    background-color: #000000;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transition: all 0.5s;
+
+    &_selected {
+      background-color: #d6750d; // другой выбрать
+    }
+
+    @for $var from 1 to $amout-lines + 1 {
+      @if $start-position + 3deg * $var < $finish-position {
+        &:nth-child(#{$var}) {
+          transform: translate(-($line-width / 2), -($line-height / 2)) rotate( $start-position + 3deg * $var) translate($knob-size / 2 - $line-width / 2);
+        }
+      }
+      @if $start-position + 3deg * $var >= $finish-position {
+        &:nth-child(#{$var}) {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+
+@mixin click-degrees($amout-parts, $skew, $start-deg, $finish-deg) {
+  &__degree {
+    position: absolute;
+
+    width: $knob-size / 2;
+    height: $knob-size / 2;
+
+    top: 50%;
+    left: 50%;
+
+    transform-origin: 0 0;
+
+    // box-shadow: 0 0 0 1px #000000;
+    
+
+    @for $var from 1 to $amout-parts + 1 {
+      @if $start-deg + $var * $rotate < $finish-deg {
+        &:nth-child(#{$var}) {
+          transform: rotate($start-deg + $var*$rotate) skew($skew);
+        }
+      }
+      @if $start-deg + $var * $rotate >= $finish-deg {
+        &:nth-child(#{$var}) {
+          display: none;
+        }
+      }
+    }
+  }
+}

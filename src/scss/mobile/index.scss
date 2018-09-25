@@ -1,0 +1,104 @@
+body,
+html {
+  padding: 0;
+  margin: 0;
+  font-family: Arial;
+  height: 100%; // for footer
+}
+
+.container {
+  max-width: 590px;
+  min-width: 360px;
+  margin-left: auto;
+  margin-right: auto;
+
+  padding: 0 20px;
+  padding-bottom: 64px; // for footer
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  &_justify-center {
+    justify-content: center;
+  }
+}
+
+.flex-border {
+  flex-grow: 1;
+}
+
+.font {
+  &_normal {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  &_large {
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  &_title {
+    margin: 0;
+    margin-bottom: 19px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333333;
+  }
+
+  &_footer {
+    font-size: 12px;
+    color: #858585;
+    letter-spacing: 0.01px;
+    text-align: left;
+  }
+
+  &_bold {
+    font-weight: bold;
+  }
+}
+
+%list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+%link {
+  text-decoration: none;
+  color: black;
+}
+
+#wrap { // for footer
+  min-height: 100%;
+}
+
+.scroll-window {
+  overflow: auto;
+
+  &_size_200 {
+    width: 200px; 
+  }
+
+  &_size_align {
+    width: 100%; 
+  }
+
+  &::-webkit-scrollbar {
+    width: 0px;
+  }
+}
+
+%clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@import "header/header";
+@import "main/main";
+@import "footer/footer";
+@import "windows/windows";

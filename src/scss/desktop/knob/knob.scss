@@ -1,0 +1,89 @@
+@import "knob-mixins";
+
+$knob-size: 220px;
+
+$line-width: 20px;
+$line-height: 1px;
+$amout-lines: 120;
+
+$start-position: 120deg;
+$finish-position: 410deg;
+
+$cursor-height: 13px;
+
+//
+$skew: 81deg;
+$rotate: 9deg;
+$amout-parts: 40;
+
+
+.knob {
+  width: $knob-size;
+  height: $knob-size;
+  margin-left: auto;
+  margin-right: auto;
+
+  position: relative;
+
+  display: flex;
+
+  &__background {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: $knob-size - $line-width * 2;
+    height: $knob-size - $line-width * 2;
+    // padding: $line-width;
+
+    background: #FEFEFE;
+    box-shadow: 0 2px 4px 0 rgba(134,121,71,0.45);
+    border-radius: 50%;
+  }
+
+  &__cursor {
+    position: absolute;
+    
+    width: $cursor-height;
+    height: $knob-size - $line-width * 2;
+
+    left: $knob-size / 2 - $cursor-height / 2;
+    top: $line-width;
+
+    background-image: url("../../assets/Icons/icon_arrow.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+
+    transition: all 0.5s;
+  }
+
+  &__display {
+    position: relative;
+    z-index: 1;
+
+    margin: auto;
+    font-weight: bold;
+    font-size: 66px;
+    color: #333333;
+    letter-spacing: 0;
+    text-align: left;
+  }
+
+  &__click-space {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+
+
+    overflow: hidden;
+
+    @include click-degrees($amout-parts, $skew, 120deg, 400deg);
+  }
+
+  @include line-degrees( $line-width, $line-height, $amout-lines, $start-position, $finish-position );
+}

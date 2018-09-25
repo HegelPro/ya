@@ -1,0 +1,127 @@
+.filter {
+  @extend %list;
+
+  position: relative;
+
+  &__iteam {
+    position: absolute;
+    right: 0;
+    top: -10px;
+
+    transition: all 1s;
+
+    &:nth-child(1) {
+      z-index: 5;
+      right: 30px;
+
+      .filter__btn {
+        padding-right: 5px;
+        border-radius: 20px 0 0 20px;
+      }
+    }
+  
+    &:nth-child(2) {
+      z-index: 4;
+
+      opacity: 0;
+    }
+  
+    &:nth-child(3) {
+      z-index: 3;
+
+      opacity: 0;
+    }
+  
+    &:nth-child(4) {
+      z-index: 2;
+
+      opacity: 0;
+    }
+  
+    &:nth-child(5) {
+      z-index: 1;
+
+      opacity: 0;
+    }
+  }
+
+  
+
+  &__dropper {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    
+    width: 30px;
+    height: 23px;
+    padding-top: 8px;
+
+    background: #FFD93E;
+    border: none;
+
+    border-radius: 0 20px 20px 0;
+
+    text-align: center;
+    
+    &:hover {
+      background: #F7F7F7;
+    }
+  }
+
+  &__dropper-input {
+    display: none;
+
+    position: absolute;
+  }
+
+  &__btn {
+    border-radius: 20px;
+
+    margin: 0;
+    padding: 8px 15px;
+
+    background: #FFD93E;
+    border: none;
+
+    font-size: 13px;
+    font-weight: bold;
+    color: #000000;
+    text-align: center;
+
+    &:hover {
+      background: #F7F7F7;
+    }
+  }
+}
+
+#filter__dropper-input:checked ~ .filter .filter__iteam {
+  opacity: 1;
+
+  .filter__btn {
+    box-shadow: 0 0 5px -2px #000000;
+  }
+
+  .filter__dropper {
+    box-shadow: 0 0 5px -2px #000000;
+  }
+
+  &:nth-child(1) {
+    top: -10px;
+  }
+
+  &:nth-child(2) {
+    top: 20px;
+  }
+
+  &:nth-child(3) {
+    top: 50px;
+  }
+
+  &:nth-child(4) {
+    top: 80px;
+  }
+
+  &:nth-child(5) {
+    top: 110px;
+  }
+}

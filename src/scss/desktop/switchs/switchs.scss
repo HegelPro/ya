@@ -1,0 +1,35 @@
+.switch-left-right {
+  display: flex;
+  width: 47px;
+  justify-content: space-between;
+
+
+  &__arrow_l {
+    display: block;
+    background-color: inherit;
+    width: 16px;
+    height: 16px;
+    border: none;
+
+    &:hover {
+      .switch-left-right__arrow_l__icon {
+        opacity: 1;
+      }
+    } 
+  }
+
+  &__arrow_r {
+    display: block;
+    background-color: inherit;
+    width: 16px;
+    height: 16px;
+    border: none;
+    transform: rotate(180deg);
+
+    &:hover {
+      .switch-left-right__arrow_r__icon {
+        opacity: 1;
+      }
+    } 
+  }
+}

@@ -1,0 +1,14 @@
+.favorite-devises {
+  overflow: hidden;
+
+  &__header {
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 20px;
+  }
+
+  &__title {
+    margin: 0;
+  }
+}

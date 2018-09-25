@@ -1,0 +1,42 @@
+.dom-main {
+  &__card {
+    padding: 0 0 0 25px;
+
+    height: 282px;
+
+    border-radius: 20px;
+
+    &__text {
+      padding-top: 25px;
+      color: #333333;
+    }
+
+    &__greeting {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    &__report {
+      font-size: 12px;
+      color: #333333;
+      margin: 0 0 25px 0;
+    }
+
+    &__temp {
+      margin-bottom: 20px;
+    }
+
+    background-image: url('../../assets/bg@1x.png');
+    background-repeat: no-repeat;
+  }
+
+  &__new-section {
+    margin-bottom: 30px;
+  }
+}
+
+@import "temp";
+@import "../switchs/switchs";
+@import "favorite-devises";
+@import "filter";
+@import "../devices-list/devices-list";

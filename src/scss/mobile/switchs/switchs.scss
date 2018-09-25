@@ -1,0 +1,24 @@
+.switch-left-right {
+  display: flex;
+  width: 47px;
+  justify-content: space-between;
+
+
+  &__arrow_l {
+    display: block;
+    background-color: inherit;
+    width: 16px;
+    stroke: red;
+    height: 16px;
+    border: none;
+  }
+
+  &__arrow_r {
+    display: block;
+    background-color: inherit;
+    width: 16px;
+    height: 16px;
+    border: none;
+    transform: rotate(180deg);
+  }
+}

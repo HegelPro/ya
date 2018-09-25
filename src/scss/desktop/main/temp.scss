@@ -1,0 +1,52 @@
+.temp {
+  display: flex;
+
+  &__inside {
+    display: flex;
+    flex-direction: column;
+
+    margin-right: 18px;
+  }
+
+  &__outside {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__place {
+    font-size: 14px;
+    color: #858585;
+
+    margin-bottom: 4px;
+  }
+
+  &__value {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333333;
+    letter-spacing: 0;
+    text-align: left;
+
+    &_cloud {
+      position: relative;
+
+      &::after {
+        content: "";
+
+        position: absolute;
+        top: 8px;
+        right: -34px;
+
+        display: block;
+
+        width: 26px;
+        height: 26px;
+
+        background-image: url("../../../assets/cloud-drizzle.png");
+        background-repeat: no-repeat;
+
+
+      } 
+    }
+  }
+}
