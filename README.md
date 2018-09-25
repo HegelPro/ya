@@ -12,8 +12,8 @@
 npm run build:prod
 npm run build:mobile
 ```
-Открыть десктопную версию по адресу: ./dist/prod/index.html
-Открыть мобильную версию по адресу: ./dist/mobile/index.html
+* Открыть десктопную версию по адресу: ./dist/prod/index.html
+* Открыть мобильную версию по адресу: ./dist/mobile/index.html
 
 ## Инструменты используемые в написании приложения:
 * Native JavaScript
